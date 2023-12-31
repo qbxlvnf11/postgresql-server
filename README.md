@@ -30,8 +30,6 @@ sudo apt-get -y install postgresql
 sudo apt install postgresql postgresql-contrib
 ```
 
-### Step 2. Run PostgresSQL Service
-
 #### - Run PostgresSQL service
 
 ```
@@ -44,7 +42,7 @@ sudo service postgresql start
 sudo service postgresql status
 ```
 
-### Step 3. Connect PostgresSQL Server on Ubuntu
+### Step 2. Set PostgresSQL Admin Account
 
 #### - Connect PostgresSQL Server
 
@@ -52,8 +50,6 @@ sudo service postgresql status
 sudo -i -u postgres
 psql
 ```
-
-### Step 4. Set PostgresSQL Admin Account
 
 #### - Set Passwords of PostgresSQL Admin Account
 
@@ -69,11 +65,11 @@ ALTER USER postgres WITH PASSWORD '{passwords}';
 \du
 ```
 
-### Step 5. Create PostgresSQL Database
+### Step 3. Create PostgresSQL Database
 
 #### - Create PostgresSQL Database
 
-  - We set Owner as 'postgres'
+  - Set Owner as 'postgres'
 
 ```
 CREATE DATABASE {db_name} OWNER postgres;
@@ -83,4 +79,47 @@ CREATE DATABASE {db_name} OWNER postgres;
 
 ```
 \list
+```
+
+#### - Disconnect PostgresSQL Server
+
+```
+exit
+```
+
+### Step 4. Allow Remote Connection 
+
+#### - Move to path of PostgresSQL configs file
+
+```
+cd /ect/postgresql/{version_of_PostgresSQL}/main
+```
+
+#### - Edit 'postgresql.conf' file
+
+  - Set 'listen_addresses' as '0.0.0.0' for listening to all IPs
+  - Set 'port' to the port you want to connect to
+    
+<img src="https://github.com/qbxlvnf11/postgresql-server/assets/52263269/42799844-d67e-493e-adf5-556ae0ac3eb2" width="50%"></img>
+    
+```
+sudo nano postgresql.conf
+```
+
+#### - Edit 'pg_hba.conf' file
+
+  - Add line as follow
+    
+<img src="https://github.com/qbxlvnf11/postgresql-server/assets/52263269/80f23735-dcde-43cc-a412-9bc1d583ddd3" width="50%"></img>
+
+```
+sudo nano pg_hba.conf
+```
+
+#### - Restart PostgresSQL service 
+
+  - For applying modified config file
+
+```
+sudo service postgresql restart
 ```
