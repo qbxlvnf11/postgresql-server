@@ -100,7 +100,7 @@ cd /ect/postgresql/{version_of_PostgresSQL}/main
   - Set 'listen_addresses' as '0.0.0.0' for listening to all IPs
   - Set 'port' to the port you want to connect to
     
-<img src="https://github.com/qbxlvnf11/postgresql-server/assets/52263269/42799844-d67e-493e-adf5-556ae0ac3eb2" width="50%"></img>
+<img src="https://github.com/qbxlvnf11/postgresql-server/assets/52263269/42799844-d67e-493e-adf5-556ae0ac3eb2" width="60%"></img>
     
 ```
 sudo nano postgresql.conf
@@ -108,9 +108,9 @@ sudo nano postgresql.conf
 
 #### - Edit 'pg_hba.conf' file
 
-  - Add line as follow
+  - Add line as follow for allowing to connect all IPs
     
-<img src="https://github.com/qbxlvnf11/postgresql-server/assets/52263269/80f23735-dcde-43cc-a412-9bc1d583ddd3" width="50%"></img>
+<img src="https://github.com/qbxlvnf11/postgresql-server/assets/52263269/80f23735-dcde-43cc-a412-9bc1d583ddd3" width="60%"></img>
 
 ```
 sudo nano pg_hba.conf
@@ -118,7 +118,7 @@ sudo nano pg_hba.conf
 
 #### - Restart PostgresSQL service 
 
-  - For applying modified config file
+  - For applying modified configs file
 
 ```
 sudo service postgresql restart
