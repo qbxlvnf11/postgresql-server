@@ -7,7 +7,7 @@ Contents
 PostgresSQL Server Buildup
 =============
 
-## Step 1. Install PostgresSQL Server
+### Step 1. Install PostgresSQL Server
 
 #### - Check which version of PostgreSQL to install on Ubuntu
 
@@ -30,7 +30,7 @@ sudo apt-get -y install postgresql
 sudo apt install postgresql postgresql-contrib
 ```
 
-## Step 2. Run PostgresSQL Service
+### Step 2. Run PostgresSQL Service
 
 #### - Run PostgresSQL service
 
@@ -44,7 +44,7 @@ sudo service postgresql start
 sudo service postgresql status
 ```
 
-## Step 3. Connect PostgresSQL Server on Ubuntu
+### Step 3. Connect PostgresSQL Server on Ubuntu
 
 #### - Connect PostgresSQL Server
 
