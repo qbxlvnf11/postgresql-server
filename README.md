@@ -92,7 +92,7 @@ exit
 #### - Move to path of PostgresSQL configs file
 
 ```
-cd /ect/postgresql/{version_of_PostgresSQL}/main
+cd /etc/postgresql/{version_of_PostgresSQL}/main
 ```
 
 #### - Edit 'postgresql.conf' file
