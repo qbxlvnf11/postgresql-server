@@ -53,4 +53,34 @@ sudo -i -u postgres
 psql
 ```
 
+### Step 4. Set PostgresSQL Admin Account
 
+#### - Set Passwords of PostgresSQL Admin Account
+
+  - 'postgres' is default admin account of PostgresSQL
+    
+```
+ALTER USER postgres WITH PASSWORD '{passwords}';
+```
+
+#### - Show PostgresSQL Accounts
+
+```
+\du
+```
+
+### Step 5. Create PostgresSQL Database
+
+#### - Create PostgresSQL Database
+
+  - We set Owner as 'postgres'
+
+```
+CREATE DATABASE {db_name} OWNER postgres;
+```
+
+#### - Show PostgresSQL Database
+
+```
+\list
+```
