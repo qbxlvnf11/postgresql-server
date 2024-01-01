@@ -87,7 +87,7 @@ CREATE DATABASE {db_name} OWNER postgres;
 exit
 ```
 
-### Step 4. Allow Remote Connection 
+### Step 4. Allow Remote Access 
 
 #### - Move to path of PostgresSQL configs file
 
@@ -106,6 +106,14 @@ cd /etc/postgresql/{version_of_PostgresSQL}/main
 sudo nano postgresql.conf
 ```
 
+#### - Restart PostgresSQL service 
+
+  - For applying modified configs file
+
+```
+sudo service postgresql restart
+```
+
 #### - Edit 'pg_hba.conf' file
 
   - Add line as follow for allowing to connect all IPs
@@ -122,4 +130,15 @@ sudo nano pg_hba.conf
 
 ```
 sudo service postgresql restart
+```
+
+### Step 5. Test Remote Access
+
+#### - Remote access to PostgresSQL server with Python
+
+  - Custom python PostgresSQL server class
+    - Connect PostgreSQL server, Create table, Insert data, Select data etc.
+
+```
+python db_test --host {server_ip} --port {port} --db_name {db_name} --user postgres --password {password} --table_name {table_name}
 ```
