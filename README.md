@@ -134,11 +134,11 @@ sudo service postgresql restart
 
 ### Step 5. Test Remote Access
 
-#### - Remote access to PostgresSQL server with Python
+#### - Test remote access to PostgresSQL server and running query
 
   - Custom python PostgresSQL server class
     - Connect PostgreSQL server, Create table, Insert data, Select data etc.
 
 ```
-python db_test --host {server_ip} --port {port} --db_name {db_name} --user postgres --password {password} --table_name {table_name}
+python db_test --host '{server_ip}' --port {port} --db_name '{db_name}' --user 'postgres' --password '{password}' --table_name '{table_name}'
 ```
