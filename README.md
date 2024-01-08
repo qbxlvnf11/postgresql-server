@@ -4,7 +4,7 @@ Contents
 
 #### - Install PostgresSQL server on Ubuntu and remote access with Python
 
-PostgresSQL Server Buildup
+Build PostgresSQL Server
 =============
 
 ### Step 1. Install PostgresSQL Server
