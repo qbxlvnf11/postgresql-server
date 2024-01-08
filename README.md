@@ -44,11 +44,17 @@ sudo service postgresql status
 
 ### Step 2. Set PostgresSQL Admin Account
 
-#### - Connect PostgresSQL Server
+#### - Connect PostgresSQL Server and 
 
 ```
 sudo -i -u postgres
 psql
+```
+
+#### - Confirm the current connection and user information
+
+```
+\conninfo
 ```
 
 #### - Set Passwords of PostgresSQL Admin Account
@@ -141,4 +147,12 @@ sudo service postgresql restart
 
 ```
 python db_test --host '{server_ip}' --port {port} --db_name '{db_name}' --user 'postgres' --password '{password}' --table_name '{table_name}'
+```
+
+#### - Confirm data in created database
+
+```
+sudo -i -u postgres
+psql -d {db_name} -U postgres -W
+SELECT * FROM {table_name};
 ```
